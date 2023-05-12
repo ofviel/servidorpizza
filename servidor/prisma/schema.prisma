@@ -1,0 +1,20 @@
+// conexões
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+// Tabelas Banco de dados 
+
+model cadastropizza {
+  id   String @id @default(uuid())
+  nome String
+  tamanhopizza String
+  saborpizza String
+  adicionais String
+  datahora DateTime @default(now())
+}
